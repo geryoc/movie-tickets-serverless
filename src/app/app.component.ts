@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './shared/modules/material-module';
-import { NavbarComponent } from './shared/components/layout/navbar/navbar/navbar.component';
+import { LayoutNavbarComponent } from './shared/components/layout/layout-navbar/layout-navbar.component';
+import { LayoutSidenavMenuComponent } from './shared/components/layout/layout-sidenav-menu/layout-sidenav-menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MaterialModule, NavbarComponent],
+  imports: [RouterOutlet, MaterialModule, LayoutNavbarComponent, LayoutSidenavMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'movie-tickets-serverless';
+export class AppComponent implements OnInit {
+
+  showSidebar: boolean = false;
+
+  ngOnInit(): void {
+  }
+
+  toggleSidebar() {
+    this.showSidebar = !this.showSidebar;
+  }
 }

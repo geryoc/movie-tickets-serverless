@@ -1,14 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { MaterialModule } from '../../../../modules/material-module';
+import { MaterialModule } from '../../../modules/material-module';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-layout-navbar',
   standalone: true,
   imports: [MaterialModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  templateUrl: './layout-navbar.component.html',
+  styleUrl: './layout-navbar.component.css'
 })
-export class NavbarComponent {
+export class LayoutNavbarComponent {
   @Output() onMenuClicked = new EventEmitter<void>();
 
   menuToggle() {

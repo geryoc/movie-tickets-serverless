@@ -1,18 +1,38 @@
-<div>
-  <mat-drawer-container class="drawer-container" autosize>
-    <mat-drawer #drawer class="drawer-sidenav-menu" mode="side">
-      <p>Auto-resizing sidenav</p>
+<div class="app-container">
+  <mat-drawer-container autosize>
+    <mat-drawer mode="over" [(opened)]="showSidebar">
+      <app-layout-sidenav-menu> </app-layout-sidenav-menu>
     </mat-drawer>
-    <div class="drawer-sidenav-content">
-      <div>
-        <div class="navbar-container">
-          <app-navbar (onMenuClicked)="drawer.toggle()"></app-navbar>
-        </div>
-        <div class="body-container">
-          <!-- <router-outlet></router-outlet> -->
-          <h3>Hello!</h3>
-        </div>
-      </div>
+
+    <app-layout-navbar (onMenuClicked)="toggleSidebar()"> </app-layout-navbar>
+
+    <div class="body-container container-fluid pt-3">
+      <router-outlet></router-outlet>
+      <h1>Hello!!</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
+        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
+        officia accusantium perferendis, doloribus illum expedita ducimus fugit
+        laudantium.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
+        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
+        officia accusantium perferendis, doloribus illum expedita ducimus fugit
+        laudantium.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
+        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
+        officia accusantium perferendis, doloribus illum expedita ducimus fugit
+        laudantium.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
+        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
+        officia accusantium perferendis, doloribus illum expedita ducimus fugit
+        laudantium.
+      </p>
     </div>
   </mat-drawer-container>
 </div>
