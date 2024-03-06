@@ -1,38 +1,11 @@
-<div class="app-container">
-  <mat-drawer-container autosize>
-    <mat-drawer mode="over" [(opened)]="showSidebar">
-      <app-layout-sidenav-menu> </app-layout-sidenav-menu>
-    </mat-drawer>
-
-    <app-layout-navbar (onMenuClicked)="toggleSidebar()"> </app-layout-navbar>
-
-    <div class="body-container container-fluid pt-3">
+<mat-drawer-container autosize>
+  <mat-drawer mode="side" [(opened)]="showSidenav">
+    <app-layout-sidenav-menu> </app-layout-sidenav-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-layout-navbar (onMenuClicked)="toggleSidenav()"></app-layout-navbar>
+    <div class="container-fluid p-4">
       <router-outlet></router-outlet>
-      <h1>Hello!!</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
-        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
-        officia accusantium perferendis, doloribus illum expedita ducimus fugit
-        laudantium.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
-        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
-        officia accusantium perferendis, doloribus illum expedita ducimus fugit
-        laudantium.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
-        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
-        officia accusantium perferendis, doloribus illum expedita ducimus fugit
-        laudantium.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, quia
-        laborum non aliquid ad explicabo nisi, hic optio ipsum alias quis
-        officia accusantium perferendis, doloribus illum expedita ducimus fugit
-        laudantium.
-      </p>
     </div>
-  </mat-drawer-container>
-</div>
+  </mat-drawer-content>
+</mat-drawer-container>

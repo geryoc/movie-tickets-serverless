@@ -11,7 +11,7 @@ import { MaterialModule } from '../../../modules/material-module';
 export class LayoutNavbarComponent {
   @Output() onMenuClicked = new EventEmitter<void>();
 
-  menuToggle() {
+  menuButtonClicked() {
     this.onMenuClicked.emit();
   }
 }

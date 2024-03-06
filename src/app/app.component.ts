@@ -13,12 +13,12 @@ import { LayoutSidenavMenuComponent } from './shared/components/layout/layout-si
 })
 export class AppComponent implements OnInit {
 
-  showSidebar: boolean = false;
+  showSidenav: boolean = true;
 
   ngOnInit(): void {
   }
 
-  toggleSidebar() {
-    this.showSidebar = !this.showSidebar;
+  toggleSidenav() {
+    this.showSidenav = !this.showSidenav;
   }
 }
