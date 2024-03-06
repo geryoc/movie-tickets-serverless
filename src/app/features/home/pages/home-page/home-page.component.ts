@@ -6,8 +6,6 @@ import { HomeContainerComponent } from '../../components/home-container/home-con
   standalone: true,
   imports: [HomeContainerComponent],
   templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
+  styleUrl: './home-page.component.css',
 })
-export class HomePageComponent {
-
-}
+export class HomePageComponent {}

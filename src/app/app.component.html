@@ -3,7 +3,7 @@
     <app-layout-sidenav-menu> </app-layout-sidenav-menu>
   </mat-drawer>
   <mat-drawer-content>
-    <app-layout-navbar (onMenuClicked)="toggleSidenav()"></app-layout-navbar>
+    <app-layout-navbar (menuClicked)="toggleSidenav()"></app-layout-navbar>
     <div class="container-fluid p-4">
       <router-outlet></router-outlet>
     </div>

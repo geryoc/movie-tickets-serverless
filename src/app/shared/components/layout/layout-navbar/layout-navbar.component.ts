@@ -6,12 +6,12 @@ import { MaterialModule } from '../../../modules/material-module';
   standalone: true,
   imports: [MaterialModule],
   templateUrl: './layout-navbar.component.html',
-  styleUrl: './layout-navbar.component.css'
+  styleUrl: './layout-navbar.component.css',
 })
 export class LayoutNavbarComponent {
-  @Output() onMenuClicked = new EventEmitter<void>();
+  @Output() menuClicked = new EventEmitter<void>();
 
   menuButtonClicked() {
-    this.onMenuClicked.emit();
+    this.menuClicked.emit();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MaterialModule } from './shared/modules/material-module';
 import { LayoutNavbarComponent } from './shared/components/layout/layout-navbar/layout-navbar.component';
@@ -7,16 +7,17 @@ import { LayoutSidenavMenuComponent } from './shared/components/layout/layout-si
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MaterialModule, LayoutNavbarComponent, LayoutSidenavMenuComponent],
+  imports: [
+    RouterOutlet,
+    MaterialModule,
+    LayoutNavbarComponent,
+    LayoutSidenavMenuComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-
+export class AppComponent {
   showSidenav: boolean = true;
-
-  ngOnInit(): void {
-  }
 
   toggleSidenav() {
     this.showSidenav = !this.showSidenav;
